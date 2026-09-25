@@ -1,0 +1,57 @@
+/* Shared colors and sizing make the design easy to update. */
+:root { --navy: #132d3b; --teal: #00776d; --mint: #89e3cb; --ink: #203744; --muted: #526874; --line: #dce6e8; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; padding: 42px 24px; background: #edf2f1; color: var(--ink); font-family: "Segoe UI", Arial, sans-serif; font-size: 15px; line-height: 1.65; }
+a { color: inherit; text-underline-offset: 4px; }
+a:focus-visible { outline: 3px solid var(--mint); outline-offset: 5px; }
+.cv { max-width: 1120px; margin: auto; display: grid; grid-template-columns: 330px 1fr; background: #fff; box-shadow: 0 18px 60px #183c4410; border-radius: 16px; overflow: hidden; }
+.sidebar { padding: 44px 34px; color: #f4faf9; background: var(--navy); }
+.monogram { display: inline-block; margin-bottom: 60px; font-size: 32px; line-height: 1; font-weight: 800; letter-spacing: -2px; text-decoration: none; }
+.monogram span, h1 span { color: var(--mint); }
+.eyebrow { margin: 0 0 13px; font-size: 11px; letter-spacing: 2px; font-weight: 700; }
+.sidebar .eyebrow { color: var(--mint); }
+h1 { margin: 0 0 18px; font-size: 39px; line-height: 1.17; letter-spacing: -1.6px; }
+.role { color: #cadbdd; font-size: 14px; line-height: 1.8; }
+.status { display: inline-flex; align-items: center; gap: 9px; margin-top: 18px; padding: 7px 13px; border: 1px solid #45616a; border-radius: 30px; font-size: 12px; }
+.status span { width: 7px; height: 7px; background: var(--mint); border-radius: 50%; }
+.sidebar-section { margin-top: 65px; border-top: 1px solid #45616a; padding-top: 28px; }
+.sidebar-section h2 { font-size: 18px; }
+.label { margin: 23px 0 4px; font-size: 10px; letter-spacing: 1.5px; color: #b8ced1; }
+.sidebar-section a { font-size: 13px; overflow-wrap: anywhere; }
+.sidebar-note { margin-top: 55px; color: #b8ced1; font-size: 13px; }
+.content { padding: 32px 44px 22px; }
+.page-header { display: flex; justify-content: space-between; padding-bottom: 24px; border-bottom: 1px solid var(--line); font-size: 10px; font-weight: 700; letter-spacing: 1.6px; color: var(--muted); }
+.section { padding: 26px 0; border-bottom: 1px solid var(--line); }
+.section .eyebrow { color: var(--teal); }
+h2 { margin: 0 0 14px; font-size: 23px; line-height: 1.35; letter-spacing: -.6px; }
+#profile h2 { font-size: 31px; letter-spacing: -1px; }
+.accent { color: var(--teal); }
+p { margin: 0 0 12px; }
+.section > p:not(.eyebrow) { color: var(--muted); }
+.section > p:last-child { margin-bottom: 0; }
+.section-title { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.badge { white-space: nowrap; padding: 4px 8px; color: #006657; background: #e6f6ef; border-radius: 5px; font-size: 9px; font-weight: 700; letter-spacing: .6px; }
+.education { padding-left: 17px; border-left: 3px solid var(--teal); }
+h3 { font-size: 14px; margin: 0 0 5px; font-weight: 650; }
+.education p { margin: 2px 0; font-size: 13px; }
+.muted { color: var(--muted); }
+.skill-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 24px; }
+.skill-grid p { color: var(--muted); font-size: 13px; margin: 0; }
+footer { display: flex; justify-content: space-between; gap: 16px; padding-top: 20px; color: var(--muted); font-size: 10px; }
+/* Stack the columns on phones and small tablets. */
+@media (max-width: 760px) {
+  body { padding: 16px; }
+  .cv { grid-template-columns: 1fr; }
+  .sidebar { padding: 30px; }
+  .monogram { margin-bottom: 30px; }
+  .sidebar-section { margin-top: 30px; }
+  .sidebar-note { margin: 25px 0 0; }
+  .content { padding: 26px; }
+  .section-title { flex-wrap: wrap; margin-bottom: 12px; }
+  .section-title h2 { margin-bottom: 0; }
+  #profile h2 { font-size: 27px; }
+  footer { flex-direction: column; gap: 4px; }
+}
+@media (max-width: 380px) { .skill-grid { grid-template-columns: 1fr; } h1 { font-size: 34px; } }
+@media print { body { padding: 0; background: white; } .cv { box-shadow: none; } .sidebar { print-color-adjust: exact; } }
