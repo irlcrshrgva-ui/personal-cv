@@ -3,4 +3,4 @@ Git Merge Conflict Activity
 Student: Irl Crishreg L. Peña
 Course Activity: Git Branching and Merge Conflicts
 
-Programming Language: JavaScript
+Programming Language: Python
